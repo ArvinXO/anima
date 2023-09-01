@@ -7,18 +7,25 @@ class AnimationCategoryList extends StatelessWidget {
       'categoryName': 'Fade Animations',
       'animations': [
         {'name': 'Fade Animation', 'route': '/fade_animation'},
+        {'name': 'Fade and Scale Animation', 'route': '/fade_scale_animation'},
+        {'name': 'Crossfade Animation', 'route': '/cross_fade_animation'},
       ],
     },
     {
       'categoryName': 'Bouncing Animations',
       'animations': [
         {'name': 'Bouncing Animation', 'route': '/bouncing_animation'},
+        {'name': 'Bouncing Ball Animation', 'route': '/bouncing_ball_animation'},
+        {'name': 'Bouncing Card Animation', 'route': '/bouncing_card_animation'},
       ],
     },
     {
       'categoryName': 'Color Animations',
       'animations': [
         {'name': 'Color Animation', 'route': '/colour_animation'},
+        {'name': 'Color Transition Animation', 'route': '/colour_transition_animation'},
+        {'name': 'Color Loop Animation', 'route': '/colour_loop_animation'},
+        {'name': 'Color Pulse Animation', 'route': '/color_pulse_animation'},
       ],
     },
     {
