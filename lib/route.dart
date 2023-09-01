@@ -8,6 +8,7 @@ import 'animations/fade_animation/fade_animation.dart';
 import 'animations/rotation_animation/rotation_animation.dart';
 import 'animations/slide_animation/slide_animaton.dart';
 import 'animations/staggered_animation/staggered_animation.dart';
+import 'animations/bouncing_animation/bouncing_animation.dart';
 import 'default.dart';
 
 Map<String, Widget Function(BuildContext)> animationRoutes = {
@@ -19,8 +20,12 @@ Map<String, Widget Function(BuildContext)> animationRoutes = {
   '/custom_path_animation': (context) => CustomPathAnimationWidget(),
   '/combination_animation': (context) => CombinationAnimationWidget(),
   '/staggered_animation': (context) => StaggeredAnimationWidget(),
+  '/bounce_animation': (context) => BouncingAnimationWidget(),
   // Add more routes for other animations here
 };
+
+class BounceAnimationWidget {
+}
 
 MaterialPageRoute generateRoute(RouteSettings settings) {
   final builder = animationRoutes[settings.name];

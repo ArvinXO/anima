@@ -50,6 +50,7 @@ class AnimationList extends StatelessWidget {
     {'name': 'Custom Path Animation', 'route': '/custom_path_animation'},
     {'name': 'Combination Animation', 'route': '/combination_animation'},
     {'name': 'Staggered Animation', 'route': '/staggered_animation'},
+    {'name': 'Bounce Animation', 'route': '/bounce_animation'},
 
     // Add more animations here as needed
   ];
