@@ -1,4 +1,9 @@
+import 'package:anima/animations/custom_path_animation/path_transition_animation.dart';
+import 'package:anima/animations/flip_animation/flip_animation.dart';
 import 'package:anima/animations/scale_animation/scale_animation.dart';
+import 'package:anima/animations/text_animation/text_animations.dart';
+import 'package:anima/animations/text_animation/text_colour_transition.dart';
+import 'package:anima/animations/text_animation/typewriter_animation.dart';
 import 'package:anima/main.dart';
 import 'package:flutter/material.dart';
 import 'animations/color_animation/colour_animation.dart';
@@ -21,6 +26,11 @@ Map<String, Widget Function(BuildContext)> animationRoutes = {
   '/combination_animation': (context) => CombinationAnimationWidget(),
   '/staggered_animation': (context) => StaggeredAnimationWidget(),
   '/bounce_animation': (context) => BouncingAnimationWidget(),
+  '/flip_animation': (context) => FlipAnimationWidget(),
+  '/path_transition_animation': (context) => PathTransitionAnimationWidget(),
+  '/text_animation': (context) => TextAnimationWidget(),
+  '/typewriter_animation': (context) => TypewriterTextAnimationWidget(),
+  '/text_colour_transition_animation': (context) => TextColourTransitionAnimationWidget(),
   // Add more routes for other animations here
 };
 

@@ -1,6 +1,8 @@
 import 'package:anima/route.dart'; // Import your routing functions and animationRoutes
 import 'package:flutter/material.dart';
 
+import 'data/animation_category_list.dart';
+
 void main() {
   runApp(AnimaApp());
 }
@@ -30,46 +32,45 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         centerTitle: true,
-        title: Text('Anima'),
+        title: const Text('Anima'),
       ),
-      body: AnimationList(), // Display the AnimationList widget here
+      body: AnimationCategoryList(), // Display the AnimationCategoryList widget here
     );
   }
 }
 
-class AnimationList extends StatelessWidget {
-  // Define a list of animations with their names and route names
-  final List<Map<String, String>> animations = [
-    {'name': 'Fade Animation', 'route': '/fade_animation'},
-    {'name': 'Slide Animation', 'route': '/slide_animation'},
-    {'name': 'Scale Animation', 'route': '/scale_animation'},
-    {'name': 'Rotation Animation', 'route': '/rotation_animation'},
-    {'name': 'Color Animation', 'route': '/color_animation'},
-    {'name': 'Custom Path Animation', 'route': '/custom_path_animation'},
-    {'name': 'Combination Animation', 'route': '/combination_animation'},
-    {'name': 'Staggered Animation', 'route': '/staggered_animation'},
-    {'name': 'Bounce Animation', 'route': '/bounce_animation'},
 
-    // Add more animations here as needed
-  ];
+
+class AnimationCategoryWidget extends StatelessWidget {
+  final String categoryName;
+  final List<Map<String, String>> animations;
+
+  AnimationCategoryWidget({
+    required this.categoryName,
+    required this.animations,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: animations.map((animation) {
-          return CustomListTile(
-            animationName: animation['name']!,
-            animationRoute: animation['route']!,
-            onTap: () {
-              // Navigate to the animation when the tile is tapped
-              Navigator.pushNamed(context, animation['route']!);
-            },
-          );
-        }).toList(),
+    return ExpansionTile(
+      title: Text(
+        categoryName,
+        style: TextStyle(
+          fontSize: 18.0,
+          fontWeight: FontWeight.bold,
+        ),
       ),
+      children: animations.map((animation) {
+        return CustomListTile(
+          animationName: animation['name']!,
+          animationRoute: animation['route']!,
+          onTap: () {
+            // Navigate to the animation when the tile is tapped
+            Navigator.pushNamed(context, animation['route']!);
+          },
+        );
+      }).toList(),
     );
   }
 }
@@ -87,34 +88,18 @@ class CustomListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return ListTile(
+      title: Text(
+        animationName,
+        style: TextStyle(
+          fontSize: 18.0,
+          fontWeight: FontWeight.normal,
+        ),
+      ),
       onTap: onTap,
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
-        decoration: BoxDecoration(
-          border: Border(
-            bottom: BorderSide(
-              color: Colors.grey,
-              width: 0.5,
-            ),
-          ),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              animationName,
-              style: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            Icon(
-              Icons.arrow_forward,
-              color: Colors.blue,
-            ),
-          ],
-        ),
+      trailing: Icon(
+        Icons.arrow_forward,
+        color: Colors.blue,
       ),
     );
   }
