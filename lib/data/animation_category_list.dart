@@ -29,45 +29,22 @@ class AnimationCategoryList extends StatelessWidget {
       ],
     },
     {
-      'categoryName': 'Combination Animations',
-      'animations': [
-        {'name': 'Combination Animation', 'route': '/combination_animation'},
-      ],
-    },
-    {
-      'categoryName': 'Custom Path Animations',
-      'animations': [
-        {'name': 'Custom Path Animation', 'route': '/custom_path_animation'},
-      ],
-    },
-    {
       'categoryName': 'Path Transition Animations',
       'animations': [
         {'name': 'Path Transition Animation', 'route': '/path_transition_animation'},
+        {'name': 'Custom Path Animation', 'route': '/custom_path_animation'},
+
       ],
     },
     {
-      'categoryName': 'Flip Animations',
+      'categoryName': 'Transform Animations',
       'animations': [
         {'name': 'Flip Animation', 'route': '/flip_animation'},
-      ],
-    },
-    {
-      'categoryName': 'Rotation Animations',
-      'animations': [
         {'name': 'Rotation Animation', 'route': '/rotation_animation'},
-      ],
-    },
-    {
-      'categoryName': 'Scale Animations',
-      'animations': [
         {'name': 'Scale Animation', 'route': '/scale_animation'},
-      ],
-    },
-    {
-      'categoryName': 'Slide Animations',
-      'animations': [
         {'name': 'Slide Animation', 'route': '/slide_animation'},
+        {'name': 'Combination Animation', 'route': '/combination_animation'},
+
       ],
     },
     {
