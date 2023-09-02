@@ -57,7 +57,7 @@ class AnimationCategoryWidget extends StatelessWidget {
       title: Text(
         categoryName,
         style: TextStyle(
-          fontSize: 18.0,
+          fontSize: 14.0,
           fontWeight: FontWeight.bold,
         ),
       ),
@@ -92,7 +92,7 @@ class CustomListTile extends StatelessWidget {
       title: Text(
         animationName,
         style: TextStyle(
-          fontSize: 18.0,
+          fontSize: 14.0,
           fontWeight: FontWeight.normal,
         ),
       ),

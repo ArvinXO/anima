@@ -7,6 +7,7 @@ import 'package:anima/animations/custom_path_animation/path_transition_animation
 import 'package:anima/animations/fade_animation/cross_fade_animation.dart';
 import 'package:anima/animations/flip_animation/flip_animation.dart';
 import 'package:anima/animations/scale_animation/scale_animation.dart';
+import 'package:anima/animations/text_animation/glitch_animation.dart';
 import 'package:anima/animations/text_animation/text_animations.dart';
 import 'package:anima/animations/text_animation/text_colour_transition.dart';
 import 'package:anima/animations/text_animation/typewriter_animation.dart';
@@ -45,6 +46,7 @@ Map<String, Widget Function(BuildContext)> animationRoutes = {
   '/colour_transition_animation': (context) => ColourTransitionAnimationWidget(),
   '/colour_loop_animation': (context) => ColourLoopAnimationWidget(),
   '/color_pulse_animation': (context) => ColourPulseAnimationWidget(),
+  '/glitch_animation': (context) => GlitchTextAnimationWidget(),
 
   // Add more routes for other animations here
 };

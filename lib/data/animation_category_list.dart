@@ -79,6 +79,7 @@ class AnimationCategoryList extends StatelessWidget {
     {
       'categoryName': 'Text Animations',
       'animations': [
+        {'name': 'Glitch Text Animation', 'route': '/glitch_animation'},
         {'name': 'Text Animation', 'route': '/text_animation'},
         {'name': 'Typewriter Animation', 'route': '/typewriter_animation'},
         {'name': 'Colour Transition Text Animation', 'route': '/text_colour_transition_animation'},

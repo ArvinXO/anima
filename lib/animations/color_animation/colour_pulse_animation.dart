@@ -20,7 +20,7 @@ class _ColourPulseAnimationWidgetState extends State<ColourPulseAnimationWidget>
     _controller = AnimationController(
       duration: Duration(seconds: 2),
       vsync: this,
-    )..addListener(() {
+    )..addListener(() { 
       setState(() {
         _currentColour = ColorTween(
           begin: _startColour,
