@@ -1,4 +1,5 @@
 # anima
+[![Codemagic build status](https://api.codemagic.io/apps/64f35fb99bd136df80038be1/64f35fb99bd136df80038be0/status_badge.svg)](https://codemagic.io/apps/64f35fb99bd136df80038be1/64f35fb99bd136df80038be0/latest_build)
 
 A new Flutter project.
 
